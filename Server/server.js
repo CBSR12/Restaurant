@@ -46,5 +46,5 @@ app.get("/testNow", (req, res) => {
 
 
 app.listen(port, ()=> {
-   console.log("We are listening on: http://localhost:3000");
+   console.log(`We are listening on: http://localhost:${port}`);
 })
