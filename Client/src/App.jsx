@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import MainPage from './Components/MainPage'
+import MainPage from './Components/MainPage/MainPage'
+import BookReservation from './Components/BookReservation/BookReservation'
 import './App.css'
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           <p>Restaurant Page</p>
           <button onClick={() => setCurPage("main")}>Go back to Main Page</button>
       </div>
+     )}
+     {curPage === "party" && (
+      <BookReservation changeState={(nextPage) => setCurPage(nextPage)}/>
      )}
     </>
   )

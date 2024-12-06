@@ -9,6 +9,7 @@ export default function MainPage({ changeState }) {
             <div>
                 <button onClick={() => changeState("customer")}>Customer Page</button>
                 <button onClick={() => changeState("restaurant")}>Restaurant Page</button>
+                <button onClick={() => changeState("party")}>Party</button>
             </div>
         </>
     )
