@@ -24,7 +24,7 @@ export default function LoginPage({ changeState }) {
 
           if (res.ok) {
               console.log("Login successful, data received:", data);
-              changeState("customer", data);
+              changeState("main", data);
           } else {
               const errData = await res.json();
               console.error("Login failed:", errData);

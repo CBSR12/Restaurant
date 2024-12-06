@@ -95,7 +95,7 @@ export default function CustomerPage({ changeState, customerData }) {
         </>
       )}
       <button onClick={() => changeState("main")}>Back to Main Page</button>
-      <button onClick={() => changeState("party")}>Book Reservation</button>
+      {/* <button onClick={() => changeState("party")}>Book Reservation</button> */}
 
     </>
   );

@@ -4,7 +4,7 @@ import './App.css';
 import React from 'react';
 import LoginPage from './Components/LoginPage'; // Import LoginPage component
 import CustomerPage from './Components/CustomerPage'; // Import CustomerPage component
-import BookReservation from './Components/BookReservation'; // Import BookReservation component
+//import BookReservation from './Components/BookReservation'; // Import BookReservation component
 
 
 
@@ -44,10 +44,10 @@ function App() {
         
       />          
      )}
-     {curPage === "party" && (
+     {/* {curPage === "party" && (
         <BookReservation 
         changeState={(nextPage) => setCurPage(nextPage)}/>
-     )}
+     )} */}
     </>
   );
 }
