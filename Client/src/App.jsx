@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import MainPage from './Components/MainPage'
+import SignUp from './Components/SignUpPage'
 import './App.css'
 
 function App() {
@@ -15,13 +16,18 @@ function App() {
           <p>Customer Page</p>
           <button onClick={() => setCurPage("main")}>Go back to Main Page</button>
       </div>
-        
-      
      )}
-     {curPage === "restaurant" && (
+     {curPage === "login" && (
         <div>
-          <p>Restaurant Page</p>
+          <LoginPage />
           <button onClick={() => setCurPage("main")}>Go back to Main Page</button>
+      </div>
+     )}
+     {curPage === "signup" && (
+        <div>
+          <SignUp />
+          <button onClick={() => setCurPage("main")}>Go back to Main Page</button>
+          <button onClick={() => setCurPage("login")}>Have an account? Login</button>
       </div>
      )}
     </>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import './MainPage.css';
 
 
+
 export default function MainPage({ changeState }) {
     return (
         <>
@@ -9,6 +10,7 @@ export default function MainPage({ changeState }) {
             <div>
                 <button onClick={() => changeState("customer")}>Customer Page</button>
                 <button onClick={() => changeState("restaurant")}>Restaurant Page</button>
+                <button onClick={() => changeState("signup")}>Sign Up</button>
             </div>
         </>
     )
