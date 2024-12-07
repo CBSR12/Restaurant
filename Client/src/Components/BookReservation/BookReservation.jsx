@@ -140,7 +140,7 @@ export default function BookReservation({ changeState, customerData }) {
                     </button>
                     <button
                         type="button"
-                        onClick={() => changeState("main")}
+                        onClick={() => changeState("main", customerData)}
                         className="btn btn-secondary"
                     >
                         Back
