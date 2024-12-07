@@ -9,7 +9,7 @@ export default function MainPage({ changeState }) {
             <h1>Welcome to the Main Page! Please Navigate to the Page You Would Like to Visit.</h1>
             <div>
                 <button onClick={() => changeState("customer")}>Customer Page</button>
-                <button onClick={() => changeState("restaurant")}>Restaurant Page</button>
+                <button onClick={() => changeState("reservation")}>Reservation Detail</button>
                 <button onClick={() => changeState("signup")}>Sign Up</button>
             </div>
         </>
