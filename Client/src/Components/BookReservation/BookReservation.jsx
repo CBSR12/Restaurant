@@ -1,9 +1,9 @@
 import { useState } from "react";
 import './BookReservation.css';
 
-export default function BookReservation({ changeState }) {
+export default function BookReservation({ changeState, customerData }) {
     const [party, setParty] = useState({
-        cId: 1,
+        cId: customerData.customer_id,
         handicap: "No",
         seatPref: "Indoor",
         numKids: 0,
@@ -47,7 +47,9 @@ export default function BookReservation({ changeState }) {
 
             if (res.ok) {
                 console.log("Party Successfully Inserted!");
-                changeState("main");
+                const resp = await res.json()
+                console.log(resp);
+                changeState("reservation", {customer_id: customerData.customer_id, restaurant_id: customerData.restaurant_id, party_id: resp.party_id});
             } else {
                 const error = await res.json();
                 console.error("Party Insert Failed: ", error);
